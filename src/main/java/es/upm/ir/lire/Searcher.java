@@ -29,7 +29,7 @@ public class Searcher {
 			ScoreDoc scoreDoc = results.scoreDocs[i];
 			System.out.print(scoreDoc.score + "\t: ");
 			System.out
-					.println(reader.document(scoreDoc.doc).getValues(DocumentBuilder.FIELD_NAME_IDENTIFIER)[0] + " -> ");
+					.print(reader.document(scoreDoc.doc).getValues(DocumentBuilder.FIELD_NAME_IDENTIFIER)[0] + " -> ");
 			System.out.println("Number of faces: " + reader.document(scoreDoc.doc).get("faces"));
 
 			System.out.println();
